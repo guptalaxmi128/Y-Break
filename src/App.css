@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+:where(.css-dev-only-do-not-override-pr0fja).ant-menu-dark .ant-menu-item-selected,
+ :where(.css-dev-only-do-not-override-pr0fja).ant-menu-dark>.ant-menu .ant-menu-item-selected {
+  background-color: #ddb42c !important;
+ }
+
+
+.ant-menu-light .ant-menu-item:hover {
+  color: #ddb42c !important; 
+}
+.ant-menu-light .ant-menu-item-selected{
+  /* background:transparent; */
+  background: #ddb42c;
+  color:#fff !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.ant-menu-light .ant-menu-item-selected:hover {
+    color: #fff !important;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,.ant-tabs .ant-tabs-tab:hover {
+    color:#1b2910;
   }
-  to {
-    transform: rotate(360deg);
+  .ant-tabs-nav .ant-tabs-ink-bar {
+    background-color: #1b2910;
   }
+
+ .custom-btn{
+  background-color: #1b2910 !important;
+  color:#fff;
+ }
+ 
+ .ant-layout-sider-zero-width-trigger {
+  top: 0 !important;
+  background: #010001 !important;
 }

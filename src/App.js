@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyLayout from "./components/admin/layout/MyLayout";
+import UpdateCard from "./components/admin/addCard/UpdateCard";
+import ViewCardStep from "./components/admin/addStep/ViewCardStep";
+import CardData from "./components/admin/video/CardData";
+import Login from "./components/admin/login/Login";
+import "./App.css";
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/admin/*" element={<MyLayout />} />
+        <Route path="/admin/card/edit/:id" element={<UpdateCard />} />
+        <Route path="/admin/cardData/:cardId" element={<CardData />} />
+        <Route path="/admin/view-steps/:cardId" element={<ViewCardStep />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
